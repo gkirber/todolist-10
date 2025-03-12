@@ -1,9 +1,9 @@
 import List from '@mui/material/List';
 import {useAppSelector} from "@/common/hooks/useAppSelector.ts";
-import {Todolist} from "@/model/todolists-reducer.ts";
-import {selectTasks} from "@/model/tasks-selectors.ts";
-import {TaskItem} from "@/TaskItem.tsx";
-import {Task} from "@/model/tasks-reducer.ts";
+import {Todolist} from "@/features/todolists/model/todolists-reducer.ts";
+import {selectTasks} from "@/features/todolists/model/tasks-selectors.ts";
+import {TaskItem} from "@/features/todolists/ui/Todolists/TodolistItem/Tasks/TaskItem/TaskItem.tsx";
+import {Task} from "@/features/todolists/model/tasks-reducer.ts";
 
 type Props = {
     todolist: Todolist

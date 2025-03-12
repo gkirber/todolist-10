@@ -1,11 +1,11 @@
 import {useAppDispatch} from "@/common/hooks/useAppDispatch.ts";
-import {changeTaskStatusAC, changeTaskTitleAC, deleteTaskAC, Task} from "@/model/tasks-reducer.ts";
+import {changeTaskStatusAC, changeTaskTitleAC, deleteTaskAC, Task} from "@/features/todolists/model/tasks-reducer.ts";
 import DeleteIcon from "@mui/icons-material/Delete";
 import IconButton from "@mui/material/IconButton";
 import {ChangeEvent} from "react";
 import {Checkbox, ListItem} from "@mui/material";
-import {getListItemSx} from "@/TodolistItem.styles.ts";
-import {EditableSpan} from "@/EditableSpan.tsx";
+import {EditableSpan} from "@/common/components/EditableSpan/EditableSpan.tsx";
+import {getListItemSx} from "@/features/todolists/ui/Todolists/TodolistItem/Tasks/TaskItem/TaskItem.styles.ts";
 
 
 type Props = {
@@ -33,10 +33,10 @@ export const TaskItem = ({task, todolistId}: Props) => {
         <ListItem sx={getListItemSx(task.isDone)}>
             <div>
                 <Checkbox checked={task.isDone} onChange={changeTaskStatus}/>
-                <EditableSpan value={task.title} onChange={changeTaskTitle} />
+                <EditableSpan value={task.title} onChange={changeTaskTitle}/>
             </div>
             <IconButton onClick={deleteTask}>
-                <DeleteIcon />
+                <DeleteIcon/>
             </IconButton>
         </ListItem>
     )
