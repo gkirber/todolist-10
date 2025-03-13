@@ -10,13 +10,12 @@ import {Header} from "@/common/components/Header/Header.tsx";
 
 export const App = () => {
     const themeMode = useAppSelector(selectThemeMode)
-
     const theme = getTheme(themeMode)
 
     return (
         <ThemeProvider theme={theme}>
             <div className={'app'}>
-                <CssBaseline />
+                <CssBaseline/>
                 <Header/>
                 <Main/>
             </div>

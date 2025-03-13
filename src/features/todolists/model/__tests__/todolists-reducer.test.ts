@@ -1,12 +1,12 @@
 import {nanoid} from '@reduxjs/toolkit'
 import {beforeEach, expect, test} from 'vitest'
 import {
-  changeTodolistFilterAC,
-  changeTodolistTitleAC,
-  createTodolistAC,
-  deleteTodolistAC,
-  Todolist,
-  todolistsReducer
+    changeTodolistFilterAC,
+    changeTodolistTitleAC,
+    createTodolistAC,
+    deleteTodolistAC,
+    Todolist,
+    todolistsReducer
 } from '../todolists-reducer.ts'
 
 let todolistId1: string
